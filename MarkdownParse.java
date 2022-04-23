@@ -20,6 +20,9 @@ public class MarkdownParse {
             currentIndex = closeParen + 1;
 
 
+            if(!markdown.substring(closeParen).contains("[")){
+                break;
+            }
         }
 
         return toReturn;

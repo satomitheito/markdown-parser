@@ -20,6 +20,11 @@ public class MarkdownParse {
             int openParen = markdown.indexOf("(", closeBracket);
             int closeParen = markdown.indexOf(")", openParen);
             currentIndex = closeParen + 1;
+            if(closeBracket + 1 == openParen){
+                if((markdown.contains("!") && !(markdown.indexOf("!",currentIndex) == openBracket - 1)) ||!markdown.contains("!")){
+                    toReturn.add(markdown.substring(openParen + 1, closeParen));
+                }
+            }
             if(!markdown.substring(closeParen).contains("[")){
                 break;
             }

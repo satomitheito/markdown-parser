@@ -25,9 +25,9 @@ public class MarkdownParse {
                     toReturn.add(markdown.substring(openParen + 1, closeParen));
                 }
             }
-            // if(!markdown.substring(closeParen).contains("[")){
-            //     break;
-            // }
+            if(!markdown.substring(closeParen).contains("[")){
+                break;
+            }
         }
 
         return toReturn;

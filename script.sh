@@ -1,4 +1,4 @@
 for file in test-files/*.md;
-do
+do 
   java MarkdownParse $file
 done
